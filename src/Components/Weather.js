@@ -9,7 +9,6 @@ class Weather extends Component {
   };
 
   updatequery = query => {
-    console.log(query)
     if (query === "") {
       this.setState({ show: false });
     }       
@@ -53,7 +52,6 @@ https://api.openweathermap.org/data/2.5/weather?q=${this.state.query}&appid=5519
           <Button onClick={() => this.displayWeather()}>CLICK_ME</Button>
           <Button variant="danger" onClick={() => this.clearquery()}>CLEAR</Button>
         </div>
-        {console.log('', displaydata)}
         {show &&
           displaydata &&
           displaydata.cod === 200 &&
